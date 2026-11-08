@@ -1,0 +1,6 @@
+# Plugins und Design sind eigene Repositories
+/sw6-*/
+/ld-admin-design/
+
+# Datenbank-Dumps nicht versionieren
+/docker/backups/
