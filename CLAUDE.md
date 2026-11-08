@@ -8,7 +8,7 @@ CLAUDE.md des jeweiligen Plugins.
 | Ordner | Inhalt | GitHub |
 |---|---|---|
 | `sw6-mensura/` | Plugin LdMensura (Konfigurator, Kalkulation) | Lohndruckerei/sw6-mensura |
-| `sw6-mensura-frontend/`, `sw6-mensura-logistik/` | Git-Worktrees von sw6-mensura (eigene Branches) | – |
+| `sw6-mensura-logistik/` | Git-Worktree von sw6-mensura (Branch `backend/logistikanteil`) | – |
 | `sw6-vectura/` | Plugin LdVectura (Versand, Verpackung) | Lohndruckerei/sw6-vectura |
 | `sw6-lieferlotse/` | Plugin LdLieferLotse (Lieferanten) | Lohndruckerei/sw6-lieferlotse |
 | `ld-admin-design/` | gemeinsames Admin-Design (Quelle, per `sync.sh` verteilt) | Lohndruckerei/sw6-backend-designsystem |
