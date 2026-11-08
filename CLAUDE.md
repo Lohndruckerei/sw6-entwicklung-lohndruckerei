@@ -16,7 +16,7 @@ CLAUDE.md des jeweiligen Plugins.
 
 Jedes Plugin ist ein eigenes Git-Repository und wird für sich versioniert, installiert und
 aktualisiert. Dieses Oberverzeichnis versioniert nur CLAUDE.md, README.md und `docker/`.
-Spielereien und Tests gehören nach `~/projekte/sw6-erste-spielereien`, nicht hierher.
+Spielereien und Tests gehören nach `~/projekte/sw6-tests` (Repo Lohndruckerei/sw6-tests), nicht hierher.
 
 ## Docker-Umgebung
 - Ein gemeinsamer Container `shopware` (Shopware 6.7, Dockware) für alle Plugins, definiert in
