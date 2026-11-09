@@ -25,6 +25,9 @@ services:
       PHP_VERSION: "8.3"
       NODE_VERSION: "20"
       XDEBUG_ENABLED: "0"
+      # Dockware-Cron: jede Minute scheduled-task:run und messenger:consume async/failed
+      # (LieferLotse-Inbox-Abruf, Indexierung) – ohne Admin-Fenster
+      SW_TASKS_ENABLED: "1"
     volumes:
       - db:/var/lib/mysql
       - shop:/var/www/html
