@@ -11,6 +11,9 @@ CLAUDE.md des jeweiligen Plugins.
 | `sw6-mensura-logistik/` | Git-Worktree von sw6-mensura (Branch `backend/logistikanteil`) | – |
 | `sw6-vectura/` | Plugin LdVectura (Versand, Verpackung) | Lohndruckerei/sw6-vectura |
 | `sw6-lieferlotse/` | Plugin LdLieferLotse (Lieferanten) | Lohndruckerei/sw6-lieferlotse |
+| `sw6-ordo/` | Plugin LdOrdo (Auftragsworkflow, Leitstand) | Lohndruckerei/sw6-ordo |
+| `sw6-proba/` | Plugin LdProba (Druckdaten-Prüfung, Freigabe) | Lohndruckerei/sw6-proba |
+| `sw6-opus/` | Plugin LdOpus (interne Produktion) | Lohndruckerei/sw6-opus |
 | `ld-admin-design/` | gemeinsames Admin-Design (Quelle, per `sync.sh` verteilt) | Lohndruckerei/sw6-backend-designsystem |
 | `docker/` | `docker-compose.yml` und `backups/` (DB-Dumps, nicht versioniert) | dieses Repo |
 

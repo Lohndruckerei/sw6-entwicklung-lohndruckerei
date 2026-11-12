@@ -35,6 +35,9 @@ services:
       - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-mensura:/var/www/html/custom/plugins/LdMensura
       - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-lieferlotse:/var/www/html/custom/plugins/LdLieferLotse
       - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-vectura:/var/www/html/custom/plugins/LdVectura
+      - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-ordo:/var/www/html/custom/plugins/LdOrdo
+      - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-proba:/var/www/html/custom/plugins/LdProba
+      - /home/gugelm/projekte/sw6-entwicklung-lohndruckerei/sw6-opus:/var/www/html/custom/plugins/LdOpus
 
 volumes:
   db:

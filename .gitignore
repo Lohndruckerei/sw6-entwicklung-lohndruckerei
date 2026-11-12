@@ -4,3 +4,6 @@
 
 # Datenbank-Dumps nicht versionieren
 /docker/backups/
+
+# SOM-Spiegel: Kopie des Produktivsystems mit Kundendaten, nie versionieren
+/docker/som-spiegel/daten/

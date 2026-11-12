@@ -9,6 +9,9 @@ cd ~/projekte/sw6-entwicklung-lohndruckerei
 git clone git@github.com:Lohndruckerei/sw6-mensura.git
 git clone git@github.com:Lohndruckerei/sw6-vectura.git
 git clone git@github.com:Lohndruckerei/sw6-lieferlotse.git
+git clone git@github.com:Lohndruckerei/sw6-ordo.git
+git clone git@github.com:Lohndruckerei/sw6-proba.git
+git clone git@github.com:Lohndruckerei/sw6-opus.git
 git clone git@github.com:Lohndruckerei/sw6-backend-designsystem.git ld-admin-design
 ```
 
