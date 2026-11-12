@@ -1,0 +1,56 @@
+# SOM-Spiegel – isolierte Kopie des Produktivsystems SOM (nur zur Auswertung, siehe sw6-ordo/docs/SOM-SPIEGEL.md)
+#
+#   docker compose up -d          SOM: http://localhost:1234/som/   Mails: http://localhost:8025
+#   docker compose down -v        alles inkl. Datenbank löschen (nach der Auswertung!)
+#
+# Abschottung: web, db und mailpit hängen nur im Netz "intern" (internal: true) und kommen weder ins
+# Firmennetz noch ins Internet – SOM kann also weder das Original, Shopware, Lieferanten noch echte
+# Mailserver erreichen. Nur der Proxy ist zusätzlich im Netz "aussen", Ports nur auf 127.0.0.1.
+# Daten (Code, Dump) liegen in ./daten und werden nie versioniert.
+
+name: som-spiegel
+
+services:
+  web:
+    build: .
+    container_name: som-web
+    volumes:
+      - ./daten/code/som:/var/www/html/som
+    networks: [intern]
+    dns: 127.0.0.1
+
+  db:
+    image: mariadb:10.4
+    container_name: som-db
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: somsystem
+      TZ: Europe/Berlin
+    volumes:
+      - db:/var/lib/mysql
+      - ./daten/som-db.sql:/docker-entrypoint-initdb.d/som-db.sql:ro
+    networks: [intern]
+
+  mailpit:
+    image: axllent/mailpit:v1.21
+    container_name: som-mailpit
+    networks: [intern]
+
+  proxy:
+    image: nginx:1.27-alpine
+    container_name: som-proxy
+    volumes:
+      - ./proxy.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "127.0.0.1:1234:1234"
+      - "127.0.0.1:8025:8025"
+    networks: [intern, aussen]
+    depends_on: [web, mailpit]
+
+networks:
+  intern:
+    internal: true
+  aussen: {}
+
+volumes:
+  db:
